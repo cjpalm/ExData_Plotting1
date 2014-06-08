@@ -1,5 +1,11 @@
 
-# load data file
+# check if data file present, if not download.
+if(!file.exists("./household_power_consumption.txt")){
+  url = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip" 
+  download.file(url,destfile="./household_power_consumption.zip",method="curl") 
+  unzip("./household_power_consumption.zip")
+}
+#laod data
 power.data <-read.csv2("./household_power_consumption.txt",na.strings="?")
 #pull out 2 dates of interest
 feb1 <- power.data[(as.Date(strptime(power.data$Date,"%d/%m/%Y")) - as.Date("2007-02-01") == 0),]
