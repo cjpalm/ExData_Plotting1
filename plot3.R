@@ -22,7 +22,7 @@ points(as.numeric(as.character(feb.1st.and.2nd.power.data$Sub_metering_2)),type=
 points(as.numeric(as.character(feb.1st.and.2nd.power.data$Sub_metering_3)),type="l",col="blue")
 legend("topright",lwd=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3")) 
 
-#make graph as png file
+#make graph as png file,  use default white background
 png("./figure/plot3.png",width = 480, height = 480)
 plot(as.numeric(as.character(feb.1st.and.2nd.power.data$Sub_metering_1)),
      ylab="Enegy sub metering",type="l", xlab="", xaxt="n")

@@ -16,7 +16,7 @@ plot(as.numeric(as.character(feb.1st.and.2nd.power.data$Global_active_power)),
      ylab="Global Active Power (kilowatts)",type="l", xlab="", xaxt="n")
 #add x-axis
 axis(at=c(1,1440,2880),side=1,labels=c("Thu","Fri","Sat"))
-#make graph as png file
+#make graph as png file,  use default white background
 png("./figure/plot2.png",width = 480, height = 480)
 plot(as.numeric(as.character(feb.1st.and.2nd.power.data$Global_active_power)),
      ylab="Global Active Power (kilowatts)",type="l", xlab="", xaxt="n")
